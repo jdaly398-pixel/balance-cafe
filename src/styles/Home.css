@@ -1,8 +1,124 @@
 .MainContainer {
-    background-image: url('../assets/homepage_image.jpeg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* if you want it to cover the full viewport height */
-    border: 2px black solid;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2047&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+.greetingArea {
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in;
+}
+
+.Buttons {
+  display: flex;
+  gap: 20px;
+  animation: slideUp 1s ease-out 0.5s both;
+}
+
+.Buttons button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.Buttons button:hover {
+  background-color: white;
+  color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
   }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .greetingArea {
+      font-size: 2.5rem;
+      padding: 0 20px;
+  }
+
+  .Buttons {
+      flex-direction: column;
+      width: 80%;
+      max-width: 300px;
+  }
+
+  .Buttons button {
+      width: 100%;
+      padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .greetingArea {
+      font-size: 2rem;
+  }
+
+  .Buttons button {
+      font-size: 1rem;
+      padding: 12px 15px;
+  }
+}
+
+/* Optional: Add a subtle overlay animation */
+.MainContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+  animation: gradientMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove {
+  from {
+      opacity: 0.3;
+  }
+  to {
+      opacity: 0.7;
+  }
+}
