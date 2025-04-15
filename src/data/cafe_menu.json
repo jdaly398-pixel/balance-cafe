@@ -3,127 +3,206 @@
     "breakfast_classics": [
       {
         "name": "Bowl of house Granola served with natural yogurt & berry compote",
-        "price": 5.75
+        "price": 5.75,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 385,
+          "protein": 12.5
+        }
       },
       {
         "name": "Porridge with toppings",
-        "price": 5.5
+        "price": 5.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 310,
+          "protein": 8.2
+        }
       },
       {
         "name": "Artisan toast multigrain or white or toasted soda",
-        "price": 3.95
+        "price": 3.95,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 220,
+          "protein": 6.5
+        }
       },
       {
         "name": "Toastie/wrap with bacon, sausage & pudding",
-        "price": 6.95
+        "price": 6.95,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 650,
+          "protein": 28.4
+        }
       },
       {
         "name": "Large gourmet sausage & black pudding roll with relish & pickled cucumber",
-        "price": 4.95
+        "price": 4.95,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 580,
+          "protein": 22.8
+        }
       },
       {
         "name": "Free range poached or scrambled egg & toast",
-        "price": 6.6
+        "price": 6.6,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 320,
+          "protein": 18.5
+        }
       },
       {
         "name": "Add bacon & grilled tomato",
-        "price": 8.9
+        "price": 8.9,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 420,
+          "protein": 24.6
+        }
       },
       {
         "name": "Free range Omelette made with love served with toast or soda",
         "base_price": 9.5,
-        "with_salads_price": 10.9
-      }, 
-      {
-        "name": "Oat Pancakes with a selection of toppings",
-        "optons": "Berry compote, banana, peanut butter, natural yoghurt, maple syrup",
-        "price": 7.5
-      }
-    ],
-    "extras": [
-      {
-        "name": "Add bacon",
-        "price": 2.5
+        "with_salads_price": 10.9,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 485,
+          "protein": 32.5
+        }
       },
       {
-        "name": "Add protein powder",
-        "price": 1.5
+        "name": "Oat Pancakes with a selection of toppings",
+        "options": "Berry compote, banana, peanut butter, natural yoghurt, maple syrup",
+        "price": 7.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 520,
+          "protein": 15.8
+        }
       }
     ],
     "sandwiches_and_wraps": [
       {
         "name": "Toastie of your choice",
         "description": "with white or wholegrain bread",
-        "price": 7.95
+        "price": 7.95,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 450,
+          "protein": 18.2
+        }
       },
       {
         "name": "Cajun chicken bacon & cheese wrap",
         "description": "toasted, or a wrap of your choice",
-        "price": 7.5
-      },
-      {
-        "name": "Add fresh handmade coleslaw",
-        "price": 1.7
-      },
-      {
-        "name": "Add selection of side salads",
-        "price": 3.0
+        "price": 7.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 580,
+          "protein": 35.4
+        }
       }
     ],
     "salads": [
       {
         "name": "Quinoa fruit mix",
         "description": "warm roasted with side salads",
-        "price": 9.5
+        "price": 9.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 320,
+          "protein": 12.5
+        }
       },
       {
         "name": "Warm chicken salad",
         "description": "with bacon, sundried tomatoes, black pudding, toasted seeds & balsamic dressing served with pickled cucumber & coleslaw",
-        "price": 11.4
+        "price": 11.4,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 425,
+          "protein": 38.2
+        }
       },
       {
         "name": "Hummus power plate",
         "description": "served with a selection of salads, chicken breast, boiled egg & hummus",
-        "price": 10.5
+        "price": 10.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 520,
+          "protein": 28.5
+        }
       }
     ],
     "baked_goods": [
       {
         "name": "Blueberry slice",
-        "price": 3.5
+        "price": 3.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 285,
+          "protein": 4.2
+        }
       },
       {
         "name": "Protein Ball",
-        "price": 2.5
+        "price": 2.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 180,
+          "protein": 12.5
+        }
       },
       {
         "name": "Energy seeded bar",
-        "price": 3.5
+        "price": 3.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 245,
+          "protein": 8.8
+        }
       },
       {
         "name": "Millionaire slice or chocolate brownie",
-        "price": 3.5
+        "price": 3.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 420,
+          "protein": 5.2
+        }
       },
       {
         "name": "Rocky Road",
-        "price": 3.0
+        "price": 3.0,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 385,
+          "protein": 4.8
+        }
       },
       {
         "name": "Scone served with jam & cream",
-        "price": 3.5
+        "price": 3.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 415,
+          "protein": 6.5
+        }
       },
       {
         "name": "Selection of tarts",
-        "price": 3.5
+        "price": 3.5,
+        "image": "https://placehold.co/400x300",
+        "nutrition": {
+          "calories": 350,
+          "protein": 5.5
+        }
       }
-    ]
-  },
-  "additional_info": {
-    "notes": [
-      "Please place your order at the counter",
-      "See board for smoothies, coffee & kids menu",
-      "Please note for health & safety reasons children must be accompanied by a guardian at all times",
-      "Only food purchased at Balance may be consumed in the cafe please"
     ]
   }
 }
