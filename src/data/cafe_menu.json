@@ -1,0 +1,129 @@
+{
+  "all_day_menu": {
+    "breakfast_classics": [
+      {
+        "name": "Bowl of house Granola served with natural yogurt & berry compote",
+        "price": 5.75
+      },
+      {
+        "name": "Porridge with toppings",
+        "price": 5.5
+      },
+      {
+        "name": "Artisan toast multigrain or white or toasted soda",
+        "price": 3.95
+      },
+      {
+        "name": "Toastie/wrap with bacon, sausage & pudding",
+        "price": 6.95
+      },
+      {
+        "name": "Large gourmet sausage & black pudding roll with relish & pickled cucumber",
+        "price": 4.95
+      },
+      {
+        "name": "Free range poached or scrambled egg & toast",
+        "price": 6.6
+      },
+      {
+        "name": "Add bacon & grilled tomato",
+        "price": 8.9
+      },
+      {
+        "name": "Free range Omelette made with love served with toast or soda",
+        "base_price": 9.5,
+        "with_salads_price": 10.9
+      }, 
+      {
+        "name": "Oat Pancakes with a selection of toppings",
+        "optons": "Berry compote, banana, peanut butter, natural yoghurt, maple syrup",
+        "price": 7.5
+      }
+    ],
+    "extras": [
+      {
+        "name": "Add bacon",
+        "price": 2.5
+      },
+      {
+        "name": "Add protein powder",
+        "price": 1.5
+      }
+    ],
+    "sandwiches_and_wraps": [
+      {
+        "name": "Toastie of your choice",
+        "description": "with white or wholegrain bread",
+        "price": 7.95
+      },
+      {
+        "name": "Cajun chicken bacon & cheese wrap",
+        "description": "toasted, or a wrap of your choice",
+        "price": 7.5
+      },
+      {
+        "name": "Add fresh handmade coleslaw",
+        "price": 1.7
+      },
+      {
+        "name": "Add selection of side salads",
+        "price": 3.0
+      }
+    ],
+    "salads": [
+      {
+        "name": "Quinoa fruit mix",
+        "description": "warm roasted with side salads",
+        "price": 9.5
+      },
+      {
+        "name": "Warm chicken salad",
+        "description": "with bacon, sundried tomatoes, black pudding, toasted seeds & balsamic dressing served with pickled cucumber & coleslaw",
+        "price": 11.4
+      },
+      {
+        "name": "Hummus power plate",
+        "description": "served with a selection of salads, chicken breast, boiled egg & hummus",
+        "price": 10.5
+      }
+    ],
+    "baked_goods": [
+      {
+        "name": "Blueberry slice",
+        "price": 3.5
+      },
+      {
+        "name": "Protein Ball",
+        "price": 2.5
+      },
+      {
+        "name": "Energy seeded bar",
+        "price": 3.5
+      },
+      {
+        "name": "Millionaire slice or chocolate brownie",
+        "price": 3.5
+      },
+      {
+        "name": "Rocky Road",
+        "price": 3.0
+      },
+      {
+        "name": "Scone served with jam & cream",
+        "price": 3.5
+      },
+      {
+        "name": "Selection of tarts",
+        "price": 3.5
+      }
+    ]
+  },
+  "additional_info": {
+    "notes": [
+      "Please place your order at the counter",
+      "See board for smoothies, coffee & kids menu",
+      "Please note for health & safety reasons children must be accompanied by a guardian at all times",
+      "Only food purchased at Balance may be consumed in the cafe please"
+    ]
+  }
+}

@@ -14,7 +14,6 @@ function App() {
           <Route path="/" exact Component={Home}></Route>
           <Route path="/menu" exact Component={Menu}></Route>
           <Route path="/contact" exact Component={Contact}></Route>
-
         </Routes>
       </Router>
     </div>
