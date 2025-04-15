@@ -1,11 +1,11 @@
-// dropdown.js
-
-export const openFilterOptions = (isOpen, setIsOpen) => {
-    setIsOpen(!isOpen);
+export const handleFilterClick = (isFilterOpen, setIsFilterOpen, setIsSortOpen) => {
+    setIsFilterOpen(!isFilterOpen);
+    setIsSortOpen(false); // Close sort dropdown when filter is clicked
 };
 
-export const openSortOptions = (isOpen, setIsOpen) => {
-    setIsOpen(!isOpen);
+export const handleSortClick = (isSortOpen, setIsSortOpen, setIsFilterOpen) => {
+    setIsSortOpen(!isSortOpen);
+    setIsFilterOpen(false); // Close filter dropdown when sort is clicked
 };
 
 export const handleOptionSelect = (optionValue, setSelectedFilter, setIsOpen) => {
@@ -14,14 +14,12 @@ export const handleOptionSelect = (optionValue, setSelectedFilter, setIsOpen) =>
 };
 
 export const handleSortOptionSelect = (type, direction, currentSort, setSelectedSort, setIsOpen) => {
-    // If clicking the same sort type, toggle direction
     if (currentSort.type === type) {
         setSelectedSort({
             type,
             direction: currentSort.direction === 'asc' ? 'desc' : 'asc'
         });
     } else {
-        // If new sort type, use the provided direction
         setSelectedSort({ type, direction });
     }
     setIsOpen(false);

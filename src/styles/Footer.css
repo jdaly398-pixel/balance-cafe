@@ -1,0 +1,67 @@
+.footer {
+    width: 100%;
+    background-color: #4BB4AF;
+    padding: 15px 0;
+    position: relative; /* Changed from fixed */
+    margin-top: auto; /* This helps push it to the bottom */
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.infoItem:first-child {
+    cursor: pointer;
+}
+
+.infoItem svg {
+    font-size: 1.2rem !important;
+    color: white;
+}
+
+.infoItem a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.infoItem a:hover,
+.infoItem:first-child:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .infoItem {
+        font-size: 0.8rem;
+    }
+
+    .infoItem svg {
+        font-size: 1rem !important;
+    }
+}

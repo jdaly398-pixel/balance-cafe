@@ -25,14 +25,14 @@ function Navbar() {
           <Link to={"/"} onClick={handleLinkClick}>Home</Link>
           <Link to={"/menu"} onClick={handleLinkClick}>Menu</Link>
           <Link to={"/about"} onClick={handleLinkClick}>About</Link>
-          <Link to={"/contact"} onClick={handleLinkClick}>Contact</Link>
+          
         </div>
       </div>
       <div className="rightSide">
         <Link to={"/"} onClick={handleLinkClick}>Home</Link>
         <Link to={"/menu"} onClick={handleLinkClick}>Menu</Link>
         <Link to={"/about"} onClick={handleLinkClick}>About</Link>
-        <Link to={"/contact"} onClick={handleLinkClick}>Contact</Link>
+        
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>

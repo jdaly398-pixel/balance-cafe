@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/Menu.css";
 import menuData from "../data/cafe_menu.json";
 import ViewListIcon from '@mui/icons-material/ViewList';
@@ -7,13 +7,13 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { 
-    openFilterOptions,
-    openSortOptions, 
     handleOptionSelect,
     handleSortOptionSelect, 
     getFilteredMenuItems,
     renderPrice,
-    getSortedItems 
+    getSortedItems,
+    handleFilterClick,
+    handleSortClick
 } from '../helpers/dropdown';
 
 function Menu() {
@@ -23,16 +23,32 @@ function Menu() {
     const [selectedSort, setSelectedSort] = useState({ type: 'none', direction: 'asc' });
     const [viewMode, setViewMode] = useState('card');
 
-    // Get filtered items
+    const filterRef = useRef(null);
+    const sortRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (filterRef.current && !filterRef.current.contains(event.target)) {
+                setIsFilterOpen(false);
+            }
+            if (sortRef.current && !sortRef.current.contains(event.target)) {
+                setIsSortOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     const filteredItems = getFilteredMenuItems(selectedFilter, menuData);
-    // Sort the filtered items
     const sortedItems = getSortedItems(filteredItems, selectedSort);
 
     const toggleViewMode = () => {
         setViewMode(viewMode === 'card' ? 'list' : 'card');
     };
 
-    // Function to get sort button text
     const getSortButtonText = () => {
         switch(selectedSort.type) {
             case 'price':
@@ -53,9 +69,9 @@ function Menu() {
             </div>
 
             <div className="buttonContainer">
-                <div className="filter">
+                <div className="filter" ref={filterRef}>
                     <button 
-                        onClick={() => openFilterOptions(isFilterOpen, setIsFilterOpen)} 
+                        onClick={() => handleFilterClick(isFilterOpen, setIsFilterOpen, setIsSortOpen)}
                         className="filterButton"
                     >
                         Filter
@@ -88,9 +104,9 @@ function Menu() {
                         </div>
                     </div>
                 </div>
-                <div className="sort">
+                <div className="sort" ref={sortRef}>
                     <button 
-                        onClick={() => openSortOptions(isSortOpen, setIsSortOpen)} 
+                        onClick={() => handleSortClick(isSortOpen, setIsSortOpen, setIsFilterOpen)}
                         className="sortButton"
                     >
                         {getSortButtonText()}
