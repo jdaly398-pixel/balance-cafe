@@ -74,7 +74,7 @@ function Menu() {
                         onClick={() => handleFilterClick(isFilterOpen, setIsFilterOpen, setIsSortOpen)}
                         className="filterButton"
                     >
-                        Filter
+                        Select Menu
                         <KeyboardArrowDownIcon />
                     </button>
                     <div className={`filterOptions ${isFilterOpen ? 'show' : ''}`}>
