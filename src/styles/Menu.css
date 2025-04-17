@@ -3,26 +3,47 @@
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
+.mainContainer {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2047&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px 20px;
+}
+
 /* Title section */
 .title {
+  text-align: center;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  animation: fadeIn 1s ease-out;
 }
 
 .title h1 {
-  font-size: 2rem;
-  color: #333;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Button container */
 .buttonContainer {
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  animation: slideUp 1s ease-out 0.3s both;
+  position: relative;
+  z-index: 9999;
 }
 
 /* Filter and Sort button containers */
@@ -30,19 +51,21 @@
 .sort {
   width: 45%;
   position: relative;
+  z-index: 9999;
 }
 
 /* Button styling */
 .filterButton, 
 .sortButton {
   width: 100%;
-  padding: 10px 30px;
+  padding: 12px 30px;
   font-size: 1rem;
-  background-color: white;
-  border: 1px solid #ccc;
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #2a2a2a;
+  border-radius: 30px;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,7 +73,8 @@
 
 .filterButton:hover, 
 .sortButton:hover {
-  background-color: #f5f5f5;
+  background: #2a2a2a;
+  transform: translateY(-2px);
 }
 
 /* Style for the arrow icons */
@@ -58,6 +82,7 @@
 .sortButton svg {
   font-size: 20px;
   margin-left: 5px;
+  color: white;
 }
 
 /* Dropdown styling */
@@ -66,13 +91,14 @@
   display: none;
   position: absolute;
   width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 99999;
+  color: white;
 }
 
 .filterOptions.show,
@@ -81,13 +107,13 @@
 }
 
 .select-option {
-  padding: 10px 15px;
+  padding: 12px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .select-option:hover {
-  background-color: #f5f5f5;
+  background: #2a2a2a;
 }
 
 /* View Toggle Button - Hidden by default on desktop */
@@ -95,6 +121,7 @@
   display: none;
   padding: 10px 20px;
   text-align: center;
+  animation: slideUp 1s ease-out 0.9s both; /* Added animation */
 }
 
 .viewToggle button {
@@ -103,9 +130,10 @@
   justify-content: center;
   gap: 8px;
   padding: 8px 16px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #2a2a2a;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -113,13 +141,22 @@
 }
 
 .viewToggle button:hover {
-  background-color: #f5f5f5;
+  background: #2a2a2a;
+  transform: translateY(-2px);
+}
+
+.viewToggle button svg {
+  color: white;
 }
 
 /* Menu area styling */
 .menuArea {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  animation: slideUp 1s ease-out 0.6s both;
+  position: relative;
+  z-index: 1;
 }
 
 /* Card View */
@@ -139,12 +176,14 @@
 /* Menu Item Card Styling */
 .menuItem {
   display: flex;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 /* Card View Item */
@@ -154,7 +193,7 @@
 
 .menuItem.card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* List View Item */
@@ -188,6 +227,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  color: white;
+  background: #1a1a1a;
 }
 
 .menuItem.list .menuItemContent {
@@ -196,13 +237,13 @@
 
 .menuItemContent h3 {
   margin-bottom: 10px;
-  color: #333;
+  color: white;
   font-size: 1.2rem;
   line-height: 1.4;
 }
 
 .menuItemContent .description {
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 8px;
   font-style: italic;
   font-size: 0.9rem;
@@ -210,7 +251,7 @@
 }
 
 .menuItemContent .options {
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 8px;
   font-size: 0.9rem;
   line-height: 1.4;
@@ -218,7 +259,7 @@
 
 .menuItemContent .price {
   font-weight: bold;
-  color: #222;
+  color: white;
   margin-top: auto;
   padding-top: 10px;
   font-size: 1.1rem;
@@ -229,7 +270,7 @@
   display: flex;
   gap: 15px;
   margin: 10px 0;
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
 }
 
@@ -241,7 +282,7 @@
 
 .nutritionIcon {
   font-size: 1.2rem !important;
-  color: #888;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Update for list view */
@@ -249,8 +290,35 @@
   margin: 5px 0;
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .mainContainer {
+    padding: 20px 15px;
+  }
+
   .viewToggle {
     display: block; /* Show toggle on mobile */
   }
@@ -306,8 +374,17 @@
     width: 100%;
   }
 
-  .sortOptions,
-  .filterOptions {
+  /* Add these new styles */
+  .filter {
+    z-index: 99999; /* Higher z-index for filter */
+  }
+
+  .sort {
+    z-index: 9999; /* Lower z-index for sort */
+  }
+
+  .filterOptions,
+  .sortOptions {
     top: 100%;
     left: 0;
   }
@@ -349,5 +426,21 @@
 
   .menuItem.list .nutritionInfo {
     flex-direction: row;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 320px) {
+  .title h1 {
+    font-size: 1.3rem;
+  }
+
+  .menuItemContent h3 {
+    font-size: 0.9rem;
+  }
+
+  .menuItemContent .description,
+  .menuItemContent .options {
+    font-size: 0.8rem;
   }
 }
