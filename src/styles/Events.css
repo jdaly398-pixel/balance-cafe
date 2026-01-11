@@ -1,4 +1,4 @@
-.aboutContainer {
+.eventsContainer {
     min-height: 100vh;
     flex: 1;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
@@ -6,26 +6,26 @@
     padding: 80px 20px;
 }
 
-.aboutHeader {
+.eventsHeader {
     text-align: center;
     margin-bottom: 60px;
     animation: fadeIn 1s ease-out;
 }
 
-.aboutHeader h1 {
+.eventsHeader h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 20px;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.tagline {
+.eventsHeader .tagline {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     color: rgba(255, 255, 255, 0.9);
     font-style: italic;
 }
 
-.aboutContent {
+.eventsContent {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -33,77 +33,121 @@
     gap: 60px;
 }
 
-.storySection {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+.eventsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
     animation: slideUp 1s ease-out 0.3s both;
 }
 
-.storySection p {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.valuesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 20px;
-    animation: slideUp 1s ease-out 0.6s both;
-}
-
-.valueCard {
+.eventCard {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 15px;
-    text-align: center;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
-.valueCard:hover {
+.eventCard:hover {
     transform: translateY(-5px);
 }
 
-.valueIcon {
-    font-size: 2.5rem !important;
-    color: white;
+.eventIcon {
     margin-bottom: 20px;
 }
 
-.valueCard h3 {
+.eventIcon svg {
+    font-size: 2.5rem !important;
+    color: #4BB4AF;
+}
+
+.eventCard h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
     color: white;
 }
 
-.valueCard p {
+.eventDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.eventDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.eventDetail svg {
+    font-size: 1.2rem !important;
+    color: #4BB4AF;
+}
+
+.eventDescription {
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
 }
 
-.missionSection {
+.recurringBadge {
+    display: inline-block;
+    background: #4BB4AF;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.eventsInfo {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 40px 20px;
-    animation: slideUp 1s ease-out 0.9s both;
+    animation: slideUp 1s ease-out 0.6s both;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
 }
 
-.missionSection h2 {
+.eventsInfo h2 {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     margin-bottom: 20px;
     color: white;
 }
 
-.missionSection p {
+.eventsInfo p {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+}
+
+.contactButton {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border: 2px solid #4BB4AF;
+    background-color: #4BB4AF;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contactButton:hover {
+    background-color: transparent;
+    color: #4BB4AF;
+    transform: translateY(-3px);
 }
 
 @keyframes fadeIn {
@@ -127,35 +171,35 @@
 }
 
 @media screen and (max-width: 768px) {
-    .aboutContainer {
+    .eventsContainer {
         padding: 60px 15px;
     }
 
-    .valuesGrid {
+    .eventsGrid {
         grid-template-columns: 1fr;
         max-width: 500px;
         margin: 0 auto;
     }
 
-    .valueCard {
+    .eventCard {
         padding: 25px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .aboutContainer {
+    .eventsContainer {
         padding: 40px 15px;
     }
 
-    .aboutHeader {
+    .eventsHeader {
         margin-bottom: 40px;
     }
 
-    .valueCard {
+    .eventCard {
         padding: 20px;
     }
 
-    .missionSection {
+    .eventsInfo {
         padding: 20px;
     }
 }

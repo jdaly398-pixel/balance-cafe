@@ -20,18 +20,21 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="leftSide" id={openLinks ? "open" : "close"}>
-        <img src={Logo} alt="Logo" />
+        <Link to="/" onClick={handleLinkClick} className="logoLink">
+          <img src={Logo} alt="Balance Cafe - Home" />
+        </Link>
         <div className="hiddenLinks">
-          <Link to={"/"} onClick={handleLinkClick}>Home</Link>
-          <Link to={"/menu"} onClick={handleLinkClick}>Menu</Link>
-          <Link to={"/about"} onClick={handleLinkClick}>About</Link>
-          
+          <Link to="/" onClick={handleLinkClick}>Home</Link>
+          <Link to="/menu" onClick={handleLinkClick}>Menu</Link>
+          <Link to="/events" onClick={handleLinkClick}>Events</Link>
+          <Link to="/about" onClick={handleLinkClick}>About</Link>
         </div>
       </div>
       <div className="rightSide">
-        <Link to={"/"} onClick={handleLinkClick}>Home</Link>
-        <Link to={"/menu"} onClick={handleLinkClick}>Menu</Link>
-        <Link to={"/about"} onClick={handleLinkClick}>About</Link>
+        <Link to="/" onClick={handleLinkClick}>Home</Link>
+        <Link to="/menu" onClick={handleLinkClick}>Menu</Link>
+        <Link to="/events" onClick={handleLinkClick}>Events</Link>
+        <Link to="/about" onClick={handleLinkClick}>About</Link>
         
         <button onClick={toggleNavbar}>
           <ReorderIcon />

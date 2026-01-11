@@ -1,18 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #1a1a1a;
+}
+
 .App {
   width: 100%;
-  height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a;
 }
-
-body {
-  padding: 0;
-  margin: 0;
-}
-
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }

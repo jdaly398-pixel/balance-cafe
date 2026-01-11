@@ -15,10 +15,23 @@
     padding-left: 2rem; 
 }
 
-.navbar .leftSide img {
-    height: 100%; 
-    width: 80%; 
+.navbar .leftSide .logoLink {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .leftSide .logoLink img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.navbar .leftSide .logoLink:hover img {
+    opacity: 0.85;
 }
 
 .navbar .rightSide {
@@ -51,12 +64,12 @@
     padding-left: 0;
 }
 
-.navbar #open img {
+.navbar #open .logoLink {
     display: none;
 }
 
-.navbar #close img {
-    display: inherit;
+.navbar #close .logoLink {
+    display: flex;
 }
 
 .navbar #open .hiddenLinks {
@@ -75,15 +88,11 @@
 
 @media only screen and (max-width: 900px) {
     .navbar .rightSide a {
-        width: 4.375rem; 
+        width: 4.375rem;
     }
-    
+
     .navbar .leftSide {
         padding-left: 1rem;
-    }
-    
-    .navbar .leftSide img {
-        width: 90%; 
     }
 }
 
@@ -94,15 +103,11 @@
 
     .navbar .rightSide {
         justify-content: flex-end;
-        padding-right: 1rem; 
+        padding-right: 1rem;
     }
 
     .navbar .rightSide button {
         display: inherit;
-    }
-    
-    .navbar .leftSide img {
-        width: 95%; 
     }
 }
 
